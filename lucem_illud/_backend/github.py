@@ -96,14 +96,14 @@ def makeStudentRepo(targetDir = '.', name = repoName):
     base = repo.create_remote('base', url='https://github.com/UChicago-Computational-Content-Analysis/Homework-Notebooks.git')
 
     base.pull('main')
-    print("Pushing to GitHub, you may have to enter your login details again")
-    while True:
-        try:
-            repo.remotes.origin.push('main')
-        except:
-            print("Your username or password was incorrect, please try again. Make sure you are using your GitHub username and password")
-        else:
-            break
+    # print("Pushing to GitHub, you may have to enter your login details again")
+    # while True:
+    #     try:
+    #         repo.remotes.origin.push('main')
+    #     except RuntimeError:
+    #         print("Your username or password was incorrect, please try again. Make sure you are using your GitHub username and password")
+    #     else:
+    #         break
     print("Done")
 
 def getGithubURL(target, auth = None):
