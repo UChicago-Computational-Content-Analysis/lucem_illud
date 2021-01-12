@@ -94,11 +94,12 @@ def makeStudentRepo(targetDir = '.', name = repoName):
         repo = git.repo.Repo(repoDir)
     print("Adding the notebooks")
     base = repo.create_remote('base', url='https://github.com/UChicago-Computational-Content-Analysis/Homework-Notebooks.git')
-    base.pull('master')
+
+    base.pull('main')
     print("Pushing to GitHub, you may have to enter your login details again")
     while True:
         try:
-            repo.remotes.origin.push('master')
+            repo.remotes.origin.push('main')
         except:
             print("Your username or password was incorrect, please try again. Make sure you are using your GitHub username and password")
         else:
