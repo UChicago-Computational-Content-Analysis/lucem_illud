@@ -12,6 +12,10 @@ except OSError:
     nlp = spacy.load("en_core_web_sm")
 
 
+import logging
+logger = logging.getLogger("spacy")
+logger.setLevel(logging.ERROR)
+
 def spacy_pos(word_list, model=nlp):
     tags = []
     # spacy expects a string to start doing the pos-tagging so we convert a list to a string
