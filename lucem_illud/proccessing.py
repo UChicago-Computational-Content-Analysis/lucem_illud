@@ -83,7 +83,7 @@ def word_tokenize(word_list, model=nlp, MAX_LEN=1500000):
 
 def sent_tokenize(word_list, model=nlp):
     doc = model(word_list)
-    sentences = [sent.string.strip() for sent in doc.sents]
+    sentences = [sent.text.strip() for sent in doc.sents]
     return sentences
 
 def normalizeTokens(word_list, extra_stop=[], model=nlp, lemma=True, MAX_LEN=1500000):
