@@ -14,7 +14,7 @@ from .data_dirs  import *
 from .downloaders import *
 from .loaders import *
 from .visualizers import *
-from .proccessing import *
+from .processing import *
 from .cartoons import *
 from .metrics import *
 from .bayesian import *

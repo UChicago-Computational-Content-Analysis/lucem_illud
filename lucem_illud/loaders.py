@@ -13,7 +13,7 @@ import tarfile
 import zipfile
 import sys
 
-from .proccessing import normalizeTokens, trainTestSplit, word_tokenize, sent_tokenize
+from .processing import normalizeTokens, trainTestSplit, word_tokenize, sent_tokenize
 
 dataDirectory = '../data'
 

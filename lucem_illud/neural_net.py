@@ -6,7 +6,7 @@ except ImportError:
 import numpy as np
 import gensim
 
-from .proccessing import sent_tokenize, word_tokenize, normalizeTokens
+from .processing import sent_tokenize, word_tokenize, normalizeTokens
 
 def vecToVar(vec):
     var = torch.autograd.Variable(torch.from_numpy(np.stack(vec)).unsqueeze(0))
