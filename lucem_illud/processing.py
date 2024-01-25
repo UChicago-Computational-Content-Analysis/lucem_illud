@@ -68,7 +68,9 @@ def tag_sents_ner(sentences, model=nlp):
     return ner_sents
 
 def word_tokenize(word_list, model=nlp, MAX_LEN=1500000):
-    
+    '''
+    note that word_list here is in fact a string. If it happens to be a list, we convert it to string format. 
+    '''
     tokenized = []
     if type(word_list) == list and len(word_list) == 1:
         word_list = word_list[0]
