@@ -104,7 +104,7 @@ def normalizeTokens(word_list, extra_stop=[], model=nlp, lemma=True, MAX_LEN=150
     # since we're only normalizing, I remove RAM intensive operations and increase max text size
 
     model.max_length = MAX_LEN
-    doc = model(word_list.lower(), disable=["parser", "tagger", "ner"])
+    doc = model(word_list.lower(), disable=["parser", "ner"])
 
     if len(extra_stop) > 0:
         for stopword in extra_stop:
