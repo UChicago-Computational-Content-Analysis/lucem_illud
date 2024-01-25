@@ -80,8 +80,8 @@ def word_tokenize(word_list, model=nlp, MAX_LEN=1500000):
     # since we're only tokenizing, I remove RAM intensive operations and increase max text size
 
     model.max_length = MAX_LEN
-    doc = model(word_list, disable=["parser", "tagger", "ner", "lemmatizer"])
-    
+    doc = model(word_list, disable=["parser", "tagger", "ner"])
+
     for token in doc:
         if not token.is_punct and len(token.text.strip()) > 0:
             tokenized.append(token.text)
